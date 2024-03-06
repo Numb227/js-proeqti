@@ -1,37 +1,46 @@
-const i = Number(prompt("შეიყვანეთ რიცხვი"));
-const o = prompt("შეიყვანე ოპერატორი");
-const a = Number(prompt("შეიყვანეთ რიცხვი"));
-let r = 0;
-switch (o) {
+const mnisvneloba1 = Number(prompt("შეიყვანეთ რიცხვი"));
+const operatori = prompt("შეიყვანე ოპერატორი");
+const mnisvneloba2 = Number(prompt("შეიყვანეთ რიცხვი"));
+let jami = 0;
+switch (operatori) {
   case "+":
-    r = i + a;
-    console.log(`${i} ${o} ${a} = ${r}`);
+    jami = mnisvneloba1 + mnisvneloba2;
+    console.log(
+      alert(`${mnisvneloba1} ${operatori} ${mnisvneloba2} = ${jami}`)
+    );
     break;
   case "-":
-    r = i - a;
-    console.log(`${i} ${o} ${a} = ${r}`);
+    jami = mnisvneloba1 - mnisvneloba2;
+    console.log(
+      alert(`${mnisvneloba1} ${operatori} ${mnisvneloba2} = ${jami}`)
+    );
     break;
   case "*":
-    r = i * a;
-    console.log(`${i} ${o} ${a} = ${r}`);
+    jami = mnisvneloba1 * mnisvneloba2;
+    console.log(
+      alert(`${mnisvneloba1} ${operatori} ${mnisvneloba2} = ${jami}`)
+    );
     break;
   case "/":
-    if (a === 0) {
+    if (mnisvneloba2 === 0) {
       console.log("გაყოფა ვერ მოხერხდეა");
     } else {
-      r = i / a;
-      console.log(`${i} ${o} ${a} = ${r}`);
+      jami = mnisvneloba1 / mnisvneloba2;
+      console.log(
+        alert(`${mnisvneloba1} ${operatori} ${mnisvneloba2} = ${jami}`)
+      );
       break;
     }
   case "%":
-    r = (i * a) / 100;
-    console.log(`${i} ${o} ${a} = ${r}`);
+    jami = (mnisvneloba1 * mnisvneloba2) / 100;
+    console.log(
+      alert(`${mnisvneloba1} ${operatori} ${mnisvneloba2} = ${jami}`)
+    );
     break;
   case "**":
-    r = i ** a;
-    console.log(`${i} ${o} ${a} = ${r}`);
+    jami = mnisvneloba1 ** mnisvneloba2;
+    console.log(alert`${mnisvneloba1} ${operatori} ${mnisvneloba2} = ${jami}`);
     break;
   default:
-    console.log("შეცდომა");
-    break;
+    console.log(alert("შეცდომა"));
 }

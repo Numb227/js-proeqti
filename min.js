@@ -33,4 +33,5 @@ switch (o) {
     break;
   default:
     console.log("შეცდომა");
+    break;
 }

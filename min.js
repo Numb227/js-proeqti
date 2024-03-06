@@ -39,7 +39,9 @@ switch (operatori) {
     break;
   case "**":
     jami = mnisvneloba1 ** mnisvneloba2;
-    console.log(alert`${mnisvneloba1} ${operatori} ${mnisvneloba2} = ${jami}`);
+    console.log(
+      alert(`${mnisvneloba1} ${operatori} ${mnisvneloba2} = ${jami}`)
+    );
     break;
   default:
     console.log(alert("შეცდომა"));

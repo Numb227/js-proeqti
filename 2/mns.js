@@ -1,41 +1,33 @@
+const compi = ["1=ქაღალდი", "2=ქვა", "3=მაკრატელი"];
 while (true) {
-  let motamashe1 = prompt(
-    "შემოიყვანე ერთ-ერთი მნიშვნელობა (მაკრატელი  ჭა  ქაღალდი) "
-  );
-  let motamashe2 = prompt(
-    "შემოიყვანე ერთ-ერთი მნიშვნელობა  (მაკრატელი  ჭა  ქაღალდი)"
-  );
+  let motamashe = prompt("აირჩიე აქედან (მაკრატელი ქვა ქაღალდი)");
+  let plery = Math.floor(Math.random(compi) * 3) + 1;
   if (
-    (motamashe1 === "მაკრატელი" && motamashe2 === "ქაღალდი") ||
-    (motamashe1 === "ქაღალდი" && motamashe2 === "მაკრატელი")
+    (motamashe === "მაკრატელი" && plery === 1) ||
+    (motamashe === "ქაღალდი" && plery === 2) ||
+    (motamashe === "ქვა" && plery === 3)
   ) {
-    alert("მოიგო მაკრატელმა");
+    alert("თქვენ მოიგეთ");
   } else if (
-    (motamashe1 === "ქაღალდი" && motamashe2 === "ჭა") ||
-    (motamashe1 === "ჭა" && motamashe2 === "ქაღალდი")
+    (motamashe === "მაკრატელი" && plery === 2) ||
+    (motamashe === "ქაღალდი" && plery === 3) ||
+    (motamashe === "ქვა" && plery === 1)
   ) {
-    alert("მოიგო ქაღალდმა");
+    alert("თქვენ წაგეთ");
   } else if (
-    (motamashe1 === "ჭა" && motamashe2 === "მაკრატელი") ||
-    (motamashe1 === "მაკრატელი" && motamashe2 === "ჭა")
-  ) {
-    alert("მოიგო ჭამ");
-  } else if (
-    (motamashe1 === "ქაღალდი" && motamashe2 === "ქაღალდი") ||
-    (motamashe1 === "ჭა" && motamashe2 === "ჭა") ||
-    (motamashe1 === "მაკრატელი" && motamashe2 === "მაკრატელი")
+    (motamashe === "მაკრატელი" && plery === 3) ||
+    (motamashe === "ქაღალდი" && plery === 1) ||
+    (motamashe === "ქვა" && plery === 2)
   ) {
     alert("ფრე");
   } else if (
     !(
-      (motamashe1 && motamashe2 === "მაკრატელი") ||
-      (motamashe1 && motamashe2 === "ჭა") ||
-      (motamashe1 && motamashe2 === "ქაღალდმა")
+      motamashe === "მაკრატელი" ||
+      motamashe === "ქაღალდი" ||
+      motamashe === "ქვა"
     )
   ) {
-    console.log(
-      alert("შეიყვანეთ მარტო ეს მოქმედებები(მაკრატელი  ჭა  ქაღალდი)")
-    );
+    alert("შეიყვანეთ მარტო ეს  მოქმედებები(მაკრატელი ქვა ქაღალდი )");
   }
   if (confirm("გავაგრძელოთ თამაში?")) {
     break;
